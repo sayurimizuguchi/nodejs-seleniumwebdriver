@@ -1,6 +1,10 @@
 const { Builder, By, Key } = require('selenium-webdriver');
 var driver = new Builder().forBrowser('chrome').build();
 
+/**
+ * By.name = name attribute inside HTML tag
+ * Example: <input name=login></input>
+ */
 const typeLogin = driver.findElement(By.name('login')).sendKeys('sayuri', Key.TAB);
 const typePassword = driver.findElement(By.name('senha')).sendKeys('123456', Key.RETURN);
 
@@ -13,7 +17,7 @@ async function login() {
         tagText.then((text) => {
             const hasMenu = text.includes('Menu do Jogo');
             if (hasMenu) {
-                console.log('OK: Usuário logado com sucesso');
+                console.log('OK: User logged with success');
                 console.log('Redirect to: '.concat(text));
                 console.log('-------------------------------------------------------------------');
             }

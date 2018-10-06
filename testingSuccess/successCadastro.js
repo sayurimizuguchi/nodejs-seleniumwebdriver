@@ -1,6 +1,10 @@
 const { Builder, By, Key } = require('selenium-webdriver');
 var driver = new Builder().forBrowser('chrome').build();
 
+/**
+ * By.name = name attribute inside HTML tag
+ * Example: <input name=login></input>
+ */
 const typeName = driver.findElement(By.name('nome')).sendKeys('Sayuri', Key.TAB);
 const typeLogin = driver.findElement(By.name('login')).sendKeys('sayurimizuguchi', Key.TAB);
 const typeSerie = driver.findElement(By.name('serie')).sendKeys('4', Key.TAB);
@@ -16,7 +20,7 @@ async function register() {
         tagText.then((text) => {
             const hasRegisterOK = text.includes('Cadastrado com sucesso!');
             if (hasRegisterOK) {
-                console.log('OK: Usuário cadastro com sucesso');
+                console.log('OK: User already registered');
                 console.log('Return from server: '.concat(text));
                 console.log('-------------------------------------------------------------------');
             }
