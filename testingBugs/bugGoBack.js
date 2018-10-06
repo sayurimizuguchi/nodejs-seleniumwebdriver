@@ -8,7 +8,7 @@ async function goBack() {
     })
     .then(function(currentUrl) { 
         if (currentUrl === 'http://ec2-13-59-235-34.us-east-2.compute.amazonaws.com:3000/cadastro') {
-            console.log('BUG: Botão VOLTAR não funciona');
+            console.log('BUG: User not redirected');
             console.log('-------------------------------------------------------------------');
         }
         return 'Teste passou'

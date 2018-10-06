@@ -14,7 +14,7 @@ async function login() {
         })
         .then(function(currentUrl) { 
             if (currentUrl !== 'http://ec2-13-59-235-34.us-east-2.compute.amazonaws.com:3000/logout') {
-                console.log('BUG: Usuário ainda logado, redirecionando para outra pagina');
+                console.log('BUG: After click logout, the session continue');
                 console.log('Redirect for: '.concat(currentUrl));
                 console.log('-------------------------------------------------------------------');
             }
