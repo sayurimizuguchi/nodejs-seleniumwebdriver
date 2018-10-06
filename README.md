@@ -14,7 +14,7 @@
 
 ### Installation
 
-Requires [Node.js](https://nodejs.org/) v4+ to run.
+Requires [Node.js](https://nodejs.org/) v4+ and v7.5- to run.
 
 Clone the repository and Install the dependencies and devDependencies and start the server.
 
